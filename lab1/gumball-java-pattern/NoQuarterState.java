@@ -43,9 +43,7 @@ public class NoQuarterState implements State {
 		System.out.println("You need to pay ");
 	} 
  
-	public String toString() {
-		return "waiting for quarter";
-	}
+	
 
 	
 	public void insertCoins(int[] a) {

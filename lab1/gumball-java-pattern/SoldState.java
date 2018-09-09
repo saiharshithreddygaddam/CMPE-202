@@ -29,9 +29,7 @@ public class SoldState implements State {
 		}
 	}
  
-	public String toString() {
-		return "dispensing a gumball";
-	}
+	
 
 	@Override
 	public void insertCoins(int i, int j) {
