@@ -1,14 +1,12 @@
-
-
 public class SoldState implements State {
  
     GumballMachine gumballMachine;
  
-    public SoldState(GumballMachine gumballMachine) {
-        this.gumballMachine = gumballMachine;
+    public SoldState(GumballMachine gM) {
+        this.gumballMachine = gM;
     }
        
-	public void insertQuarter() {
+	public void insertQuarter(int c) {
 		System.out.println("Please wait, we're already giving you a gumball");
 	}
  
@@ -22,6 +20,7 @@ public class SoldState implements State {
  
 	public void dispense() {
 		gumballMachine.releaseBall();
+		
 		if (gumballMachine.getCount() > 0) {
 			gumballMachine.setState(gumballMachine.getNoQuarterState());
 		} else {
@@ -33,6 +32,26 @@ public class SoldState implements State {
 	public String toString() {
 		return "dispensing a gumball";
 	}
+
+	@Override
+	public void insertCoins(int i, int j) {
+		// TODO Auto-generated method stub
+		System.out.println("Please wait, we're already giving you a gumball");
+	}
+
+	@Override
+	public void insertCoins(int[] a) {
+		// TODO Auto-generated method stub
+		System.out.println("Please wait, we're already giving you a gumball");
+	}
+
+	@Override
+	public void ejectCoin() {
+		// TODO Auto-generated method stub
+		
+	}
 }
+
+
 
 

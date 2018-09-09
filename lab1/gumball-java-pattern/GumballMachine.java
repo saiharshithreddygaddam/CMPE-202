@@ -1,7 +1,6 @@
 
 
 public class GumballMachine {
- 
 	State soldOutState;
 	State noQuarterState;
 	State hasQuarterState;
@@ -22,14 +21,18 @@ public class GumballMachine {
 		} 
 	}
  
-	public void insertQuarter() {
-		state.insertQuarter();
+	public void insertQuarter(int a) {
+		state.insertQuarter(a);
 	}
  
 	public void ejectQuarter() {
 		state.ejectQuarter();
 	}
- 
+	
+	public void ejectCoin() {
+		state.ejectCoin();
+	}
+	
 	public void turnCrank() {
 		state.turnCrank();
 		state.dispense();
@@ -74,17 +77,17 @@ public class GumballMachine {
     public State getSoldState() {
         return soldState;
     }
- 
-	public String toString() {
-		StringBuffer result = new StringBuffer();
-		result.append("\nMighty Gumball, Inc.");
-		result.append("\nJava-enabled Standing Gumball Model #2004");
-		result.append("\nInventory: " + count + " gumball");
-		if (count != 1) {
-			result.append("s");
-		}
-		result.append("\n");
-		result.append("Machine is " + state + "\n");
-		return result.toString();
+
+	public void insertCoins(int[] a) {
+		state.insertCoins(a);
+		
 	}
+
+	public void insertCoins(int i, int j) {
+		state.insertCoins(i, j);
+	}
+
+	
+	
+
 }
