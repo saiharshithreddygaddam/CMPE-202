@@ -1,7 +1,7 @@
 public class Bacon implements Component {
     String s ;
     public Bacon(String name){
-        s = "  {{{{ " + name +" }}}}\n" ;
+        s = "\t "+"{{{{ " + name +" }}}}\n" ;
     }
 
     @Override

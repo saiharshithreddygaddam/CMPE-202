@@ -1,7 +1,7 @@
 public class Lettuce implements Component{
     String s;
     public Lettuce(String name){
-        s = "  " +name + "\n";
+        s = "\t " +name + "\n";
     }
 
 

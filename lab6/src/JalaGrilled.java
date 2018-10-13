@@ -1,7 +1,7 @@
 public class JalaGrilled implements Component{
     String s;
     public JalaGrilled(String name){
-        s = "  ->|"+ name + "\n";
+        s = "\t ->|"+ name + "\n";
     }
 
     @Override

@@ -1,14 +1,21 @@
 import java.util.ArrayList;
 
 public class Composite implements Component{
-    protected  String name="";
+    protected  String printDesc="";
     protected ArrayList<Component> components = new ArrayList<Component>();
 
+    //public Composite ( String d )
+    //{
+    //    description = d ;
+   // }
 
-    public String printItemDescription(){
-        for(Component c: components )
-            name += c.printItemDescription();
-        return name;
+    public String printItemDescription() {
+        //String printDesc = "\n" + description;
+        for (Component obj  : components)
+        {
+            printDesc += " " + obj.printItemDescription() + "\n";
+        }
+        return printDesc;
     }
 
     public void addChild(Component c){

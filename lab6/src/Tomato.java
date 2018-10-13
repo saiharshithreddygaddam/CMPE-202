@@ -2,7 +2,7 @@ public class Tomato implements Component {
     public String s ;
     public Tomato(String name){
 
-        s = "  "+name + "\n";
+        s = "\t "+name + "\n";
     }
 
     @Override

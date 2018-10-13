@@ -1,7 +1,7 @@
 public class GOnion implements Component {
     String s;
     public GOnion (String name){
-        s = "  ->|"+name + "\n";
+        s = "\t ->|"+name + "\n";
 
     }
 
