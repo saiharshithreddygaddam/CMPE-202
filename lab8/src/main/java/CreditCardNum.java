@@ -16,17 +16,15 @@ public class CreditCardNum implements IDisplayComponent, IKeyEventHandler
 	public String display() {
 		if ( number.equals("") )
 			return "[4444 4444 4444 4444]" + "  " ;
-        else if(icd != null)
+        else
             return "[" +icd.getDecorated(number) + "]" + "  ";
-		else
-			return "[" + number + "]" + "  " ;
-	}	
+		}
 
 	public void key(String ch, int cnt) {
         if ( cnt <= 16) {
             if(ch.equals("X") && number.length() != 0)
                 number = number.substring(0, number.length() - 1);
-            else
+            else if(!ch.equals("X") && cnt >0)
                 number += ch;
             }
 		else if (nextHandler != null)

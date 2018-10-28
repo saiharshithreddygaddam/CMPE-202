@@ -17,15 +17,14 @@ public class CreditCardExp implements IDisplayComponent, IKeyEventHandler
 	public String display() {
 		if ( date.equals("") )
 			return "[MM/YY]" + "  " ;
-		else if(icd!= null)
-			return "[" + icd.getDecorated(date) +"]" + "  ";
 		else
-			return "[" + date + "]" + "  " ;
+			return "[" + icd.getDecorated(date) +"]" + "  ";
+
 	}	
 
 	public void key(String ch, int cnt) {
 		if ( cnt >= 17 && cnt <=20) {
-			if(ch.equals("X") && date.length() != 0)
+			if(ch.equals("X") && date.length() > 0)
 				date = date.substring(0, date.length() - 1);
 			else
 				date += ch;
